@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Task #<%= @task.id %></h1>
+  <a class="task">
+    <div class="info-section">
+      <h3><stron><%= @task.title %></strong></h3>
+      <p><strong>Details:</strong> <%= @task.details %></p>
+      <% if @task.completed %>
+        <p><strong>Status:</strong> done!</p>
+      <% else %>
+        <p><strong>Status:</strong> to do!</p>
+      <% end %>
+    </div>
+  </a>
+
+  <%= link_to '< All tasks', tasks_path, :class => "btn btn-sucess" %>
+</div>
